@@ -1,10 +1,11 @@
-import React from 'react'
-import MainCmponent from './components/MainComponent'
+import React from "react";
+// import MainCmponent from './components/MainComponent'
+import PainterPage from "./components/PainterPage";
 
 function App() {
   return (
-    <div >
-      <MainCmponent />
+    <div>
+      <PainterPage />
     </div>
   );
 }

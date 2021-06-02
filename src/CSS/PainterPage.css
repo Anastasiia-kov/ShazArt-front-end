@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 401px) {
+  body {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .center {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  .artist-name {
+  }
+  .cards-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
