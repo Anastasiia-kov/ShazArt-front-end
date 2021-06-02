@@ -37,7 +37,7 @@ function MainCmponent() {
     }
 
     if(artistName) {
-        return <PainterPage />
+        return <PainterPage artistName={artistName}/>
     } else {
     return (
         <div className="main-div">

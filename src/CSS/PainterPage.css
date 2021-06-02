@@ -7,13 +7,18 @@
   }
 }
 @media only screen and (max-width: 400px) {
+  body{
+    background-image: url('../Images/background.jpeg');
+  }
   .center {
     margin: auto;
     width: 50%;
     padding: 20px;
     text-align: center;
+    font-size: 30px;
   }
   .artist-name {
+    font-size: 35px;
   }
   .cards-holder {
     display: flex;

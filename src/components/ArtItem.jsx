@@ -6,38 +6,14 @@ function ArtItem() {
     <div>
       <div className="card">
         <img
-          src="https://yt3.ggpht.com/ytc/AAUvwngw35YY8vYI86RTOoEGafSxEjghjzTcKw3LbMyZ=s900-c-k-c0x00ffffff-no-rj"
+          src="https://www.passion-estampes.com/textile/picasso/tenture-picasso-gueridon.jpg"
           alt="Avatar"
         />
         <div className="container">
           <h4>
-            <b>John Doe</b>
+            <b className="pictureName">Hackathon sadness</b>
           </h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-      <div className="card">
-        <img
-          src="https://yt3.ggpht.com/ytc/AAUvwngw35YY8vYI86RTOoEGafSxEjghjzTcKw3LbMyZ=s900-c-k-c0x00ffffff-no-rj"
-          alt="Avatar"
-        />
-        <div className="container">
-          <h4>
-            <b>John Doe</b>
-          </h4>
-          <p>Architect & Engineer</p>
-        </div>
-      </div>
-      <div className="card">
-        <img
-          src="https://yt3.ggpht.com/ytc/AAUvwngw35YY8vYI86RTOoEGafSxEjghjzTcKw3LbMyZ=s900-c-k-c0x00ffffff-no-rj"
-          alt="Avatar"
-        />
-        <div className="container">
-          <h4>
-            <b>John Doe</b>
-          </h4>
-          <p>Architect & Engineer</p>
+          <p className="price">1,000,000 $</p>
         </div>
       </div>
     </div>

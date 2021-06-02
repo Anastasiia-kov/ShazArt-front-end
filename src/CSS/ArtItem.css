@@ -1,14 +1,28 @@
 .card {
+  background-color: #ffff;
+  opacity: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
-  width: 30%;
   text-align: center;
+  display: flex;
+  margin-bottom: 10px;
+  width: 320px;
+}
+
+.pictureName {
+  font-size: 20px;
+}
+
+.price {
+  font-size: 23px;
+  font-weight: 600;
 }
 
 img {
-  border-radius: 50%;
-  width: 70%;
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
   margin: 5%;
 }
 .card:hover {
@@ -17,3 +31,4 @@ img {
 .container {
   padding: 2px 16px;
 }
+

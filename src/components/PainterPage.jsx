@@ -1,13 +1,17 @@
 import React from "react";
 import "../CSS/PainterPage.css";
-import ArtItem from "./ArtItem.jsx";
+import ArtList from "./ArtList.jsx";
 
-function PainterPage() {
+const mokPictures = [
+  353453, 4535345, 345435345,
+]
+
+function PainterPage(props) {
   return (
     <div>
-      <h2 className="center">Artist Name</h2>
+      <h2 className="center">{props.artistName}</h2>
       <div className="cards-holder">
-        <ArtItem />
+        <ArtList artsId={mokPictures}/>
       </div>
     </div>
   );
