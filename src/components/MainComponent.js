@@ -3,6 +3,7 @@ import '../CSS/MainComponent.css'
 import Modal from "react-modal";
 import ArtistNameForm from './ArtistNameForm'
 import CameraUser from './CameraUser';
+import PainterPage from './PainterPage'
 
 Modal.setAppElement("#root");
 const customStyles = {
@@ -19,6 +20,7 @@ const customStyles = {
 
 function MainCmponent() {
     const [modalIsOpen, setIsOpen] = useState(false);
+    const [artistName, setArtistName] = useState(null)
 
     const closeModal = async () => {
         setIsOpen(false);
@@ -30,8 +32,13 @@ function MainCmponent() {
 
     const handleArtistName = async (artist) => {
         console.log(artist)
+        setArtistName(artist)
+        setIsOpen(false)
     }
 
+    if(artistName) {
+        return <PainterPage />
+    } else {
     return (
         <div className="main-div">
             <div className="app-name">ShazArt</div>
@@ -47,6 +54,7 @@ function MainCmponent() {
             </Modal>
         </div>
     )
+    }
 }
 
 export default MainCmponent
