@@ -26,7 +26,7 @@ function dataURItoBlob(dataURI) {
     let fdataobj = new FormData();
     fdataobj.append("image_file", file);
   // console.log(file)
-  const artist = "Palo Picasso"
+  const artist = "Pablo Picasso"
     props.artistName(artist)
   // const response = await getimageName(fdataobj)
   // console.log(response.data.image_name)

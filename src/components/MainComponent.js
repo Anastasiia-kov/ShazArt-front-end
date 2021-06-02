@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../CSS/MainComponent.css'
 import Modal from "react-modal";
 import ArtistNameForm from './ArtistNameForm'
 import CameraUser from './CameraUser';
 import PainterPage from './PainterPage'
+import {getArtistId} from '../lib/api'
 
 Modal.setAppElement("#root");
 const customStyles = {
@@ -21,6 +22,18 @@ const customStyles = {
 function MainCmponent() {
     const [modalIsOpen, setIsOpen] = useState(false);
     const [artistName, setArtistName] = useState(null)
+    const [artistId, setArtistId] = useState(null)
+
+    useEffect(() => {
+        fetch('https://www.api.artic.edu/api/v1/agents/36198',
+        {
+            mode: "cors",
+            'Access-Control-Allow-Origin': "*"
+          }
+          ).then(response => {
+            console.log(response)
+        })
+    }, [])
 
     const closeModal = async () => {
         setIsOpen(false);
@@ -34,10 +47,13 @@ function MainCmponent() {
         console.log(artist)
         setArtistName(artist)
         setIsOpen(false)
+        const data = await getArtistId(artist)
+        setArtistId(data)
+
     }
 
-    if(artistName) {
-        return <PainterPage artistName={artistName}/>
+    if(artistId) {
+        return <PainterPage artistName={artistName} artistId={artistId}/>
     } else {
     return (
         <div className="main-div">

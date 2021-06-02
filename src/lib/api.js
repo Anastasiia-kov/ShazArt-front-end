@@ -1,16 +1,25 @@
 import axios from "axios";
 
-const url = "https://www.artic.edu";
+const url = "https://www.api.artic.edu";
+
+
 
 export async function getArtistId(input) {
   const response = await axios.get(
-    `http://172.16.1.72:5000/artist?name=${input}`
+    `http://172.16.1.72:5000/artist?name=${input}`,
+  {
+    mode: "cors"
+  },
   );
   return response.data;
 }
 
 export async function getArtistsCreations(artistId) {
-  const response = await axios.get(`${url}/api/v1/agents/${artistId}`);
+  const response = await axios.get(`${url}/api/v1/agents/${artistId}`,
+  {
+    'Access-Control-Allow-Origin': "*"
+  }
+  );
   return response.data;
 }
 
