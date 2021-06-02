@@ -9,6 +9,7 @@
 @media only screen and (max-width: 400px) {
   body{
     background-image: url('../Images/background.jpeg');
+    background-size: cover;
   }
   .center {
     margin: auto;

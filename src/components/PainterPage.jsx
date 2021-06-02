@@ -12,7 +12,7 @@ function PainterPage(props) {
 
   const getArtistWorkd = async () => {
     const data = await getArtistsCreations(props.artistId)
-    console.log(data)
+    setPicturesId(data.data.artwork_ids.slice(11, 16))
   }
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function PainterPage(props) {
     <div>
       <h2 className="center">{props.artistName}</h2>
       <div className="cards-holder">
-        <ArtList artsId={mokPictures}/>
+        <ArtList artsId={picturesId}/>
       </div>
     </div>
   );

@@ -24,17 +24,6 @@ function MainCmponent() {
     const [artistName, setArtistName] = useState(null)
     const [artistId, setArtistId] = useState(null)
 
-    useEffect(() => {
-        fetch('https://www.api.artic.edu/api/v1/agents/36198',
-        {
-            mode: "cors",
-            'Access-Control-Allow-Origin': "*"
-          }
-          ).then(response => {
-            console.log(response)
-        })
-    }, [])
-
     const closeModal = async () => {
         setIsOpen(false);
     };

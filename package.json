@@ -13,8 +13,8 @@
     "react-modal": "^3.14.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "proxy": "https://www.api.artic.edu/api/v1/agents/"
+    "web-vitals": "^1.0.1"
+    
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,5 +39,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "https://www.api.artic.edu/api/v1/agents/"
 }
