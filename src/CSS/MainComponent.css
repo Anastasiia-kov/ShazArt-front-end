@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 401px) {
+body {
+    display: none;
+}
+}
+
+
+@media only screen and (max-width: 400px) {
+    .main-div {
+        background-image: url('../Images/background.jpeg');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;     
+        /* font-family: 'Comfortaa';   */
+    }
+
+    .app-name {
+        font-size: 40px;
+    }
+    .logo {
+        background-image: url('../Images/artLogo.png');
+        height: 250px;
+        width: 250px;
+        background-size: cover;
+        border: 3px solid rgb(228, 79, 166);
+        border-radius: 50%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+}

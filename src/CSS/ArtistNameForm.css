@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 401px) {
+body {
+    display: none;
+}
+}
+
+
+@media only screen and (max-width: 400px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .m-20 {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 25px;
+    }
+
+    input {
+        border: 2px solid rgb(228, 79, 166);
+        border-radius: 20px;
+        height: 40px;
+        width: 250px;
+    }
+
+    .find-button {
+        
+    }
+}
