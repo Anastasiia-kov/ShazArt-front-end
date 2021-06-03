@@ -3,10 +3,6 @@ import "../CSS/PainterPage.css";
 import ArtList from "./ArtList.jsx";
 import {getArtistsCreations} from '../lib/api'
 
-const mokPictures = [
-  353453, 4535345, 345435345,
-]
-
 function PainterPage(props) {
   const [picturesId, setPicturesId] = useState([])
 

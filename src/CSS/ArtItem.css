@@ -12,11 +12,13 @@
 
 .pictureName {
   font-size: 20px;
+  font-style: italic;
 }
 
 .price {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
+  color: rgb(207, 56, 174);
 }
 
 img {

@@ -3,7 +3,8 @@ import "../CSS/ArtItem.css";
 import {getArtworkById, getPictureParams, getYearofCreation, getEstimatePrice} from '../lib/api'
 
 function ArtItem(props) {
-  const [picture, setPicture] = useState(props.art)
+  // const [picture, setPicture] = useState(props.art)
+  const picture = props.art
   const [picURL, setPicURL] = useState('')
   const [title, setTitle] = useState('')
   const [price, setPrice] = useState('')
@@ -11,6 +12,10 @@ function ArtItem(props) {
   function randomNumber(min, max) { 
     return Math.random() * (max - min) + min;
 } 
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
   const getPicture = async () => {
     const response = await getArtworkById(picture)
@@ -30,7 +35,9 @@ function ArtItem(props) {
     const width = response2.sizes[1].width
     const height = response2.sizes[1].height
     const response4 = await getEstimatePrice(width, height, year, brightness, ratioUniqueColors, thresholdBlackPerc, highbrightnessPerc, lowbrightnessPerc, cornerPer, edgePer, faceCount)
-    setPrice(response4.toFixed(0))
+    const priceWithComas = numberWithCommas(response4.toFixed(0))
+    setPrice(priceWithComas)
+    // setPrice(response4.toFixed(0))
   }
 
   useEffect(() => {
@@ -48,7 +55,7 @@ function ArtItem(props) {
           <h4>
             <b className="pictureName">{title}</b>
           </h4>
-          <p className="price">{price} $</p>
+          <p className="price">{price}$</p>
         </div>
       </div>
     </div>

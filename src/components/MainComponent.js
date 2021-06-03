@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import '../CSS/MainComponent.css'
 import Modal from "react-modal";
-import ArtistNameForm from './ArtistNameForm'
 import CameraUser from './CameraUser';
 import PainterPage from './PainterPage'
 import {getArtistId} from '../lib/api'
